@@ -6,6 +6,7 @@ public class BossHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth;
     private int currentHealth;
+    private Animator animator;
     [SerializeField] private float regenTimer;
     [SerializeField] private float healthTimer;
     [SerializeField] private float healthTick = 2f;
@@ -16,6 +17,7 @@ public class BossHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
