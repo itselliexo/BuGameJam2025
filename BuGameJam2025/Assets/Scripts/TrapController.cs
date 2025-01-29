@@ -8,6 +8,9 @@ public class TrapController : MonoBehaviour
     [SerializeField] private GameObject trapPrefab; // Fırlatılacak trap prefab'i
     [SerializeField] private Transform dropPoint;   // Trap Location
     [SerializeField] private float dropForce = 5f;  // Trap power
+    [SerializeField] private float trapCooldown = 3f; // Cooldown timer 
+
+    private bool canDropTrap = true; // Check trap status 
 
     private void Update()
     {
@@ -19,7 +22,7 @@ public class TrapController : MonoBehaviour
         */
 
         // Press X
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKeyDown(KeyCode.X) && canDropTrap)
         {
             DropTrap();
             Debug.Log("Drop The Trap!");
@@ -48,7 +51,7 @@ public class TrapController : MonoBehaviour
     {
         if (trapPrefab == null || dropPoint == null)
         {
-            Debug.LogWarning("Trap Prefab veya Drop Point atanmadı!");
+            Debug.LogWarning("Trap Prefab or Drop Point is not assigned!");
             return;
         }
 
@@ -61,6 +64,15 @@ public class TrapController : MonoBehaviour
         {
             trapRigidbody.AddForce(dropPoint.forward * dropForce, ForceMode.Impulse);
         }
+
+        // Start Cooldown
+        canDropTrap = false;
+        StartCoroutine(ResetTrapCooldown());
     }
 
+    private IEnumerator ResetTrapCooldown()
+    {
+        yield return new WaitForSeconds(trapCooldown);
+        canDropTrap = true; // Cooldown time is over, trap can be placed again
+    }
 }
