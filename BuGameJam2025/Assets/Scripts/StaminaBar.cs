@@ -23,8 +23,8 @@ public class StaminiaBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("stem bar" + staminaBar.offsetMax.x);
-        Debug.Log("current stamina" + currentStamina);
+        //Debug.Log("stem bar" + staminaBar.offsetMax.x);
+        //Debug.Log("current stamina" + currentStamina);
         depleteStamina();
         regenerateStamina();
     }

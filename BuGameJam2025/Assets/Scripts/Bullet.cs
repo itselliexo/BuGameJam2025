@@ -15,16 +15,16 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //compare tag, if collision tag is minion, reduce minions health
-        /*if (collision.gameObject.CompareTag("Minion"))
+        if (collision.gameObject.CompareTag("Minion"))
         {
-            MinionsController minion = collision.gameObject.GetComponent<MinionsController>();
+            MinionNavMesh minion = collision.gameObject.GetComponent<MinionNavMesh>();
             if (minion != null)
             {
                 minion.TakeDamage(bulletDamage); 
                 Destroy(gameObject);
                 Debug.Log("hit");
             }
-        }*/
+        }
        
        // else
         //{

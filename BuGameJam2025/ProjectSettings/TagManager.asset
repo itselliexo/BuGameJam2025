@@ -10,6 +10,7 @@ TagManager:
   - Minion
   - DropPoint
   - Trap
+  - PlayerSpawner
   layers:
   - Default
   - TransparentFX

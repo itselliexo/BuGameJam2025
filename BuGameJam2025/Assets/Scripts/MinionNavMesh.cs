@@ -69,4 +69,8 @@ public class MinionNavMesh : MonoBehaviour
         float randomDirection = Random.value > 0.5f ? 1f : -1f;
         evasionOffset = perpendicular * randomDirection * evasionDistance;
     }
+    public void TakeDamage(int damageAmount)
+    {
+        Debug.Log($"{damageAmount} damage taken");
+    }
 }
