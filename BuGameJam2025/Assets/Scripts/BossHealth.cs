@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossHealth : MonoBehaviour
+public class BossHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] int maxHealth;
     private int currentHealth;
@@ -33,12 +33,12 @@ public class BossHealth : MonoBehaviour
         //Damage();
         if (currentHealth <= 0)
         {
-            HandleBossDeath();
+            HandleDeath();
         }
         
     }
 
-    void Damage()
+    public void Damage(int damage)
     {
         timeSinceLastDamaged = 0f;
         //purifier.damage -= currentHealth;
@@ -53,7 +53,7 @@ public class BossHealth : MonoBehaviour
         }
     }
 
-    void HandleBossDeath()
+    public void HandleDeath()
     {
         Destroy(gameObject);
         Debug.Log("Boss Defeated");
