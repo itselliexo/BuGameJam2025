@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  evasionDistance: 2
+  evasionDistance: 0
   evasionUpdateInterval: 0.5
   blineDistance: 3
   isStopped: 0
@@ -114,6 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f334ab71fd2beaf46b54402a2db5b946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  player: {fileID: 0}
   attackInterval: 0.5
   attackDamage: 10
 --- !u!1 &7194459154400601373
@@ -179,7 +181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e15bb0856e28ce147a95061e41333ec5, type: 2}
+  - {fileID: 2100000, guid: 6f047e33875897b4197e53c0aaefd4d6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
