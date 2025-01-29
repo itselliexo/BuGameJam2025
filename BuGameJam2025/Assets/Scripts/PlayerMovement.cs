@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 currentDirection;
     private Vector3 smoothedVelocity;
 
+    public StaminiaBar staminaBar;
+
     void Start()
     {
         currentSpeed = defaultSpeed;
@@ -26,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         {
             characterController = GetComponent<CharacterController>();
         }
+        StaminiaBar staminaBar = GetComponent<StaminiaBar>();
     }
 
     // Update is called once per frame
@@ -59,10 +62,9 @@ public class PlayerMovement : MonoBehaviour
         Vector3 targetDirection = transform.right * currentHorizontalVelocity + transform.forward * moveZ;
         targetDirection = targetDirection.normalized;
 
-        currentDirection = Vector3.SmoothDamp(currentDirection, targetDirection, ref smoothedVelocity, smoothingTime);
-        
+        Vector3 smoothedDirection = Vector3.SmoothDamp(targetDirection, targetDirection, ref currentDirection, smoothingTime *  Time.deltaTime);
 
-        characterController.Move(currentDirection * currentSpeed * Time.deltaTime);
+        characterController.Move(smoothedDirection * currentSpeed * Time.deltaTime);
 
         if (jump > 0 && isGrounded)
         {
@@ -76,15 +78,31 @@ public class PlayerMovement : MonoBehaviour
         {
             if (moveZ > 0 && sprint > 0)
             {
-                currentSpeed = sprint > 0 ? sprintSpeed : defaultSpeed;
+                staminaBar.depleting = true;
+                staminaBar.regenerating = false;
+                if (staminaBar.currentStamina >=1)
+                {
+                    currentSpeed = sprint > 0 ? sprintSpeed : defaultSpeed;
+                }
+                else
+                {
+                    currentSpeed = defaultSpeed;
+                }
+                
             }
             else if (moveZ < 0)
             {
+
                 currentSpeed = moveZ < 0 ? backwardsSpeed : defaultSpeed;
+                staminaBar.depleting = false;
+                staminaBar.regenerating = true;
+
             }
             else
             {
                 currentSpeed = defaultSpeed;
+                staminaBar.depleting = false;
+                staminaBar.regenerating = true;
             }
         }
     }

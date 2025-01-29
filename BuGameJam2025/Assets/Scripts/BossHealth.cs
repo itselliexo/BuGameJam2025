@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossHealth : MonoBehaviour
+public class BossHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] int maxHealth;
     private int currentHealth;
+    private Animator animator;
     [SerializeField] private float regenTimer;
     [SerializeField] private float healthTimer;
     [SerializeField] private float healthTick = 2f;
@@ -16,6 +17,7 @@ public class BossHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -31,12 +33,12 @@ public class BossHealth : MonoBehaviour
         //Damage();
         if (currentHealth <= 0)
         {
-            HandleBossDeath();
+            HandleDeath();
         }
         
     }
 
-    void Damage()
+    public void Damage(int damage)
     {
         timeSinceLastDamaged = 0f;
         //purifier.damage -= currentHealth;
@@ -51,7 +53,7 @@ public class BossHealth : MonoBehaviour
         }
     }
 
-    void HandleBossDeath()
+    public void HandleDeath()
     {
         Destroy(gameObject);
         Debug.Log("Boss Defeated");
