@@ -8453,15 +8453,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7733525873158628438, guid: bf57523d0113aba468924f0a211a6ae6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.526
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7733525873158628438, guid: bf57523d0113aba468924f0a211a6ae6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.279
+      value: -0.473
       objectReference: {fileID: 0}
     - target: {fileID: 7733525873158628438, guid: bf57523d0113aba468924f0a211a6ae6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.095
+      value: 1.73
       objectReference: {fileID: 0}
     - target: {fileID: 7733525873158628438, guid: bf57523d0113aba468924f0a211a6ae6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14452,6 +14452,10 @@ PrefabInstance:
       propertyPath: autoRifle
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1188917311497923235, guid: 246fb731ca19e0340bc3ac2b560cb2b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.448
+      objectReference: {fileID: 0}
     - target: {fileID: 2366417589847981729, guid: 246fb731ca19e0340bc3ac2b560cb2b4, type: 3}
       propertyPath: firePoint
       value: 
@@ -14563,6 +14567,14 @@ PrefabInstance:
     - target: {fileID: 8383218323520281418, guid: 246fb731ca19e0340bc3ac2b560cb2b4, type: 3}
       propertyPath: playerHealth
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897297379615246946, guid: 246fb731ca19e0340bc3ac2b560cb2b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897297379615246946, guid: 246fb731ca19e0340bc3ac2b560cb2b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6.809
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2366417589847981729, guid: 246fb731ca19e0340bc3ac2b560cb2b4, type: 3}
