@@ -132,9 +132,9 @@ MonoBehaviour:
   isDamage: 0
   regenTimer: 0
   healthTimer: 0
-  healthTick: 2
-  timeUntilRegen: 5
-  regenAmount: 5
+  healthTick: 0
+  timeUntilRegen: 0
+  regenAmount: 0
   damageDelay: 0
   collectablePrefabs: []
   bossIndex: 0

@@ -4840,7 +4840,7 @@ GameObject:
   - component: {fileID: 991944140025795707}
   m_Layer: 0
   m_Name: Purifier Gun
-  m_TagString: Untagged
+  m_TagString: Purifier
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4878,6 +4878,11 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   firePointTransform: {fileID: 0}
   purifyEffect: {fileID: 8047470401322640965}
+  bossHealth: {fileID: 0}
+  damage: 1
+  cameraObject: {fileID: 0}
+  spreadAngle: 1
+  maxRange: 100
 --- !u!1 &5485932853689206334
 GameObject:
   m_ObjectHideFlags: 0

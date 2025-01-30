@@ -19,6 +19,8 @@ TagManager:
   - Mother
   - Sister
   - Cat
+  - Gun
+  - Purifier
   layers:
   - Default
   - TransparentFX
