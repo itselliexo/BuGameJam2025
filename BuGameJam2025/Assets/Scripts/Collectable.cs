@@ -10,6 +10,10 @@ public class Collectable : MonoBehaviour
     {
         picture.SetActive(false);
     }
+    private void Awake()
+    {
+        gameObject.SetActive(true);
+    }
 
     // Update is called once per frame
     void Update()

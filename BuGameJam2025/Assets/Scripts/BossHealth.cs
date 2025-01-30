@@ -14,8 +14,10 @@ public class BossHealth : MonoBehaviour, IDamageable
     [SerializeField] private float timeUntilRegen;
     [SerializeField] private int regenAmount;
     [SerializeField] private float damageDelay;
+    [SerializeField] private List<GameObject> collectablePrefabs;
+    [SerializeField] private int bossIndex = 0;
     private float lastDamageTime;   
-    
+    Vector3 offset = new Vector3(0, 1, 0);
     
     //[SerializeField] private float timeSinceLastDamaged;
 
@@ -23,7 +25,21 @@ public class BossHealth : MonoBehaviour, IDamageable
     {
         currentHealth = maxHealth;
         //animator = GetComponent<Animator>();
-        
+        collectablePrefabs = new List<GameObject>();
+
+        Object[] loadedCollectablePrefabs = Resources.LoadAll("Collectables", typeof(GameObject));
+
+        foreach (GameObject obj in loadedCollectablePrefabs)
+        {
+            if (obj is GameObject)
+            {
+                collectablePrefabs.Add(obj);
+            }
+        }
+        if (collectablePrefabs.Count <= 0)
+        {
+            Debug.Log("No collectable prefabs in list");
+        }
     }
 
     void Update()
@@ -75,6 +91,20 @@ public class BossHealth : MonoBehaviour, IDamageable
     public void HandleDeath()
     {
         Destroy(gameObject);
+
+        if (collectablePrefabs.Count == 0)
+        {
+            Debug.Log("No Prefabs in collectables folder");
+            return;
+        }
+        if (bossIndex < 0 || bossIndex >= collectablePrefabs.Count)
+        {
+            Debug.LogError($"bossIndex {bossIndex} is out of range!");
+            return;
+        }
+        /*GameObject newCollectable = Instantiate(collectablePrefabs[bossIndex], gameObject.transform.position + offset, Quaternion.identity);
+        newCollectable.SetActive(true);
+        Debug.Log($"Boss dropped collectable: {newCollectable.name}");*/
 
         Debug.Log("Boss Defeated");
     }

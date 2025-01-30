@@ -14,6 +14,20 @@ public class PictureController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       /* DisableIfNotNull(picture);
+        DisableIfNotNull(brother);
+        DisableIfNotNull(sister);
+        DisableIfNotNull(mother);
+        DisableIfNotNull(father);
+        DisableIfNotNull(cat);
+
+        picture = picture ?? GameObject.Find("Picture");
+        brother = brother ?? GameObject.Find("Brother");
+        sister = sister ?? GameObject.Find("Sister");
+        mother = mother ?? GameObject.Find("Mother");
+        father = father ?? GameObject.Find("Father");
+        cat = cat ?? GameObject.Find("Cat");*/
+
         picture.SetActive(false);
         brother.SetActive(false);
         sister.SetActive(false);
@@ -22,6 +36,18 @@ public class PictureController : MonoBehaviour
         cat.SetActive(false);
     }
 
+   /* private void DisableIfNotNull(GameObject obj)
+    {
+        if (obj != null)
+        {
+            obj.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError($"{obj} is not assigned in {gameObject.name}!");
+        }
+    }
+   */
     // Update is called once per frame
     void Update()
     {
