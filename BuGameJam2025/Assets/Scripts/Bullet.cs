@@ -12,23 +12,24 @@ public class Bullet : MonoBehaviour
     {
         Destroy(gameObject, bulletLifeTime);
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
         //compare tag, if collision tag is minion, reduce minions health
-        if (collision.gameObject.CompareTag("Minion"))
+        if (other.CompareTag("Minion"))
         {
-            MinionNavMesh minion = collision.gameObject.GetComponent<MinionNavMesh>();
+            MinionHealth minion = other.GetComponent<MinionHealth>();
             if (minion != null)
             {
-                minion.TakeDamage(bulletDamage); 
+                Debug.Log("Hit");
+                minion.Damage(bulletDamage); 
                 Destroy(gameObject);
                 Debug.Log("hit");
             }
         }
        
-       // else
-        //{
+        else
+        {
             Destroy(gameObject);
-       // }
+        }
     }
 }

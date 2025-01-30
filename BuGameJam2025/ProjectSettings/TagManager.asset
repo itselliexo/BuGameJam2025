@@ -11,6 +11,7 @@ TagManager:
   - DropPoint
   - Trap
   - PlayerSpawner
+  - FirePointAuto
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
-  - 
+  - Minion1
+  - Minion2
+  - Bullet
   - 
   - 
   - 
