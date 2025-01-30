@@ -12,6 +12,8 @@ TagManager:
   - Trap
   - PlayerSpawner
   - FirePointAuto
+  - Shoot
+  - AutoRifle
   layers:
   - Default
   - TransparentFX
