@@ -18,18 +18,13 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Minion"))
         {
             MinionHealth minion = other.GetComponent<MinionHealth>();
+            Debug.Log($"{minion} found");
             if (minion != null)
             {
-                Debug.Log("Hit");
                 minion.Damage(bulletDamage); 
                 Destroy(gameObject);
                 Debug.Log("hit");
             }
-        }
-       
-        else
-        {
-            Destroy(gameObject);
         }
     }
 }

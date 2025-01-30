@@ -5,7 +5,7 @@ using UnityEngine;
 public class MinionHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] int currentHealth;
-    [SerializeField] int maxHealth;
+    [SerializeField] int maxHealth = 20;
     [SerializeField] int healthRegen;
     [SerializeField] float regenDelay;
     float healthClock;
