@@ -71,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += gravity * Time.fixedDeltaTime;
         characterController.Move(velocity * Time.deltaTime);
 
         if (isGrounded)

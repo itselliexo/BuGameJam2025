@@ -33,6 +33,10 @@ public class BossSpawner : MonoBehaviour
         {
             Debug.LogWarning("No minion prefabs found in Resources/Minions folder.");
         }
+        for (int i = 0; i < 4; ++i)
+        {
+            SpawnMinion();
+        }
     }
 
     void Update()
@@ -40,7 +44,10 @@ public class BossSpawner : MonoBehaviour
         spawnTimer += Time.deltaTime;
         if (spawnTimer >= spawnInterval)
         {
+            for (int i = 0; i < 4; ++i)
+            { 
             SpawnMinion();
+            }
             spawnTimer = 0f;
         }
     }

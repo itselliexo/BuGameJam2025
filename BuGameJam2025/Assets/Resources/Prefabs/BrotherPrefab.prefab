@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 2360657591508063072}
   - component: {fileID: 6346963296365937250}
   m_Layer: 6
-  m_Name: BossGhost
+  m_Name: BrotherPrefab
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,6 +135,9 @@ MonoBehaviour:
   healthTick: 2
   timeUntilRegen: 5
   regenAmount: 5
+  damageDelay: 0
+  collectablePrefabs: []
+  bossIndex: 0
 --- !u!1 &7548245571855051504
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,10 +283,55 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 64a618d0d95112843b0e0a8d7d2c67a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3252680420646733475}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 64a618d0d95112843b0e0a8d7d2c67a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2805228909164721422}
   m_SourcePrefab: {fileID: 100100000, guid: 64a618d0d95112843b0e0a8d7d2c67a8, type: 3}
 --- !u!4 &4639519385972946668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 64a618d0d95112843b0e0a8d7d2c67a8, type: 3}
   m_PrefabInstance: {fileID: 5181491639982084359}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5415915966620298326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 64a618d0d95112843b0e0a8d7d2c67a8, type: 3}
+  m_PrefabInstance: {fileID: 5181491639982084359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3252680420646733475
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415915966620298326}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a690adf5edc2ca14b8768b25cf3f6fcb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2805228909164721422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5415915966620298326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca8d2a6ad9d4bc409369c8f372a14cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
