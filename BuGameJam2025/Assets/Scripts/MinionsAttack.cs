@@ -12,10 +12,12 @@ public class MinionsAttack : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Player")
         {
             Debug.Log("hit");
             Attack();
+            Debug.Log("Attack player");
         }
     }
 
@@ -45,9 +47,10 @@ public class MinionsAttack : MonoBehaviour
     }
     void Attack()
     {
-
+        Debug.Log("Attack player");
         if (attackTimer >= attackInterval)
         {
+            Debug.Log("Minion Attacked Player");
             HealthBar.takeDamage = true;
             playerController.playerHealth -= attackDamage;
             playerController.playerHealth = Mathf.Clamp(playerController.playerHealth, 0, playerController.maxHealth); //clamping the playerHealth so it cannot be negative
