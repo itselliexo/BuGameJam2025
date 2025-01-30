@@ -118,8 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   player: {fileID: 0}
-  attackInterval: 0.5
-  attackDamage: 10
+  attackInterval: 5
+  attackDamage: 2
 --- !u!1 &2525699074115019725
 GameObject:
   m_ObjectHideFlags: 0

@@ -50,7 +50,7 @@ public class MinionsAttack : MonoBehaviour
             HealthBar.takeDamage = true;
             playerController.playerHealth -= attackDamage;
             playerController.playerHealth = Mathf.Clamp(playerController.playerHealth, 0, playerController.maxHealth); //clamping the playerHealth so it cannot be negative
-            //Debug.Log($"Player health: {playerController.playerHealth}"); //changed the debug statement to use interpolation
+            Debug.Log($"Player health: {playerController.playerHealth}"); //changed the debug statement to use interpolation
             attackTimer = 0f;
         }
     }

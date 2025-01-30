@@ -75,6 +75,7 @@ public class BossHealth : MonoBehaviour, IDamageable
     public void HandleDeath()
     {
         Destroy(gameObject);
+
         Debug.Log("Boss Defeated");
     }
 }
