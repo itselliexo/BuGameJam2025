@@ -12,6 +12,15 @@ TagManager:
   - Trap
   - PlayerSpawner
   - FirePointAuto
+  - Shoot
+  - AutoRifle
+  - Brother
+  - Father
+  - Mother
+  - Sister
+  - Cat
+  - Gun
+  - Purifier
   layers:
   - Default
   - TransparentFX
@@ -23,7 +32,7 @@ TagManager:
   - Minion1
   - Minion2
   - Bullet
-  - 
+  - Boss
   - 
   - 
   - 

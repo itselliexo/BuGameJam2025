@@ -18,7 +18,11 @@ public class Bullet : MonoBehaviour
         if (other.CompareTag("Minion"))
         {
             MinionHealth minion = other.GetComponent<MinionHealth>();
-            Debug.Log($"{minion} found");
+            if (minion == null)
+            {
+                minion = other.GetComponentInParent<MinionHealth>();
+            }
+            Debug.Log($"{minion}");
             if (minion != null)
             {
                 minion.Damage(bulletDamage); 

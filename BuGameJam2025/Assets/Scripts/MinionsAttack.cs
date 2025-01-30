@@ -7,14 +7,16 @@ public class MinionsAttack : MonoBehaviour
     [SerializeField] public PlayerController playerController;
     [SerializeField] public GameObject player;
     private float attackTimer;
-    [SerializeField] private float attackInterval = 5f;
+    [SerializeField] private float attackInterval = 10f;
     [SerializeField] private int attackDamage = 10;
 
     private void OnTriggerStay(Collider other)
     {
+        Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Player")
         {
             Attack();
+            Debug.Log("Attack player");
         }
     }
 
@@ -44,9 +46,11 @@ public class MinionsAttack : MonoBehaviour
     }
     void Attack()
     {
-
+        Debug.Log("Attack player");
         if (attackTimer >= attackInterval)
         {
+            Debug.Log("Minion Attacked Player");
+            HealthBar.takeDamage = true;
             playerController.playerHealth -= attackDamage;
             playerController.playerHealth = Mathf.Clamp(playerController.playerHealth, 0, playerController.maxHealth); //clamping the playerHealth so it cannot be negative
             Debug.Log($"Player health: {playerController.playerHealth}"); //changed the debug statement to use interpolation

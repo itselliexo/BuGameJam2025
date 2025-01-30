@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 588773559594785487}
   - component: {fileID: 7046239971905928689}
   - component: {fileID: 606137814574550360}
-  - component: {fileID: 78047098782007240}
+  - component: {fileID: 4283869452180206235}
+  - component: {fileID: 3099173705937725065}
   m_Layer: 7
   m_Name: MiniGhost 1
   m_TagString: Minion
@@ -104,7 +105,23 @@ MonoBehaviour:
   evasionUpdateInterval: 0.5
   blineDistance: 3
   isStopped: 0
---- !u!114 &78047098782007240
+--- !u!114 &4283869452180206235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631513195187052543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c070f82a604044294837a983855938, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 10
+  healthRegen: 0
+  regenDelay: 0
+--- !u!114 &3099173705937725065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   player: {fileID: 0}
-  attackInterval: 0.5
+  attackInterval: 10
   attackDamage: 10
 --- !u!1 &2525699074115019725
 GameObject:
@@ -130,7 +147,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2568515457907736360}
   - component: {fileID: 8666327167829979629}
-  - component: {fileID: 4477368431279447324}
   m_Layer: 8
   m_Name: ColliderforDamage
   m_TagString: Minion
@@ -168,7 +184,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -176,22 +192,6 @@ CapsuleCollider:
   m_Height: 1.99
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4477368431279447324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2525699074115019725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c070f82a604044294837a983855938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 0
-  maxHealth: 0
-  healthRegen: 0
-  regenDelay: 0
 --- !u!1 &7194459154400601373
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 6908434436845387878}
   - component: {fileID: 8753796014799889651}
   - component: {fileID: 1755650322731888771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Colliders
   m_TagString: Minion
   m_Icon: {fileID: 0}

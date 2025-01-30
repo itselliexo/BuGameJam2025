@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1938660882433399358}
   m_Layer: 0
   m_Name: FirePoint
-  m_TagString: FirePoint
+  m_TagString: FirePointAuto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4572992966665707969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.135, y: -1.563, z: 6.515}
+  m_LocalPosition: {x: 5.155, y: -1.485, z: 6.118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6564413560565472456}
   m_Layer: 0
   m_Name: AutoRiffle
-  m_TagString: Untagged
+  m_TagString: AutoRifle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,10 +138,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7382806846447955976}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.623663, y: 1.2161242, z: -5.374107}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.99, y: 1.99, z: 1.99}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1938660882433399358}
   - {fileID: 3643041451486285560}
