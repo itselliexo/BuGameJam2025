@@ -11,6 +11,15 @@ public class WeaponSwitcher : MonoBehaviour
 
     void Start()
     {
+        if (shoot == null)
+        {
+            shoot = GameObject.FindGameObjectWithTag("Shoot");
+        }
+        if (autoRifle == null)
+        {
+            autoRifle = GameObject.FindGameObjectWithTag("AutoRifle");
+        }
+
         SwitchWeapon(0); // Başlangıçta birinci silahı seç
     }
 

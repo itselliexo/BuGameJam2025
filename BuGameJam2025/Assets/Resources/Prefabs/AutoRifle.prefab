@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 7319898825279476443}
   - component: {fileID: 6564413560565472456}
   m_Layer: 0
-  m_Name: AutoRiffle
+  m_Name: AutoRifle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
