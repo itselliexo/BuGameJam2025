@@ -76,8 +76,8 @@ public class NewPlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity * Time.deltaTime;
-        characterController.Move(velocity * Time.deltaTime);
+        velocity.y += gravity * Time.fixedDeltaTime;
+        characterController.Move(velocity * Time.fixedDeltaTime);
 
         if (isGrounded)
         {

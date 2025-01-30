@@ -348,7 +348,7 @@ MonoBehaviour:
   sprintSpeed: 7
   backwardsSpeed: 3
   jumpHeight: 2
-  gravity: -39.24
+  gravity: -23.7
   smoothingTime: 0.3
   cameraObj: {fileID: 0}
   characterController: {fileID: 0}
