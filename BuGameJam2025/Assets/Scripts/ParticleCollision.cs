@@ -11,7 +11,7 @@ public class ParticleCollision : MonoBehaviour
         if (other.CompareTag("Boss"))
         {
             bossHealth.isDamage = true;
-            bossHealth.Damage(2);
+            bossHealth.Damage(20);
             Debug.Log("Boss Health: " + bossHealth.currentHealth);
             
         }
