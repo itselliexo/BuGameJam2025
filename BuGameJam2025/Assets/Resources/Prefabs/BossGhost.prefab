@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 4515328440882988169}
   - component: {fileID: 2360657591508063072}
   - component: {fileID: 6346963296365937250}
-  - component: {fileID: 619357760844387068}
   m_Layer: 6
   m_Name: BossGhost
   m_TagString: Boss
@@ -129,33 +128,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
+  isDamage: 0
   regenTimer: 0
   healthTimer: 0
   healthTick: 2
   timeUntilRegen: 5
   regenAmount: 5
-  timeSinceLastDamaged: 0
---- !u!95 &619357760844387068
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3957889330398370215}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5bb22b146dce8344f8b37e30eb65e595, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7548245571855051504
 GameObject:
   m_ObjectHideFlags: 0

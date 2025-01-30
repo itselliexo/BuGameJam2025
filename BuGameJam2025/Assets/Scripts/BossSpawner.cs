@@ -7,7 +7,7 @@ public class BossSpawner : MonoBehaviour
     [SerializeField] private List<GameObject> minionPrefabs;
     [SerializeField] private List<Transform> spawnPoints;
     private float spawnTimer;
-    [SerializeField] float spawnInterval = 1f;
+    [SerializeField] float spawnInterval = 5f;
     void Start()
     {
         spawnPoints = new List<Transform>();

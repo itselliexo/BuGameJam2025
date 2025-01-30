@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerHealth = maxHealth;
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
     }
 
     // Update is called once per frame

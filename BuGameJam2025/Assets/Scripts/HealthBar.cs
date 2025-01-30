@@ -13,8 +13,12 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerController playerController = GetComponent<PlayerController>();
+        PlayerController playerController = gameObject.GetComponent<PlayerController>();
         originalWidth = healthBar.sizeDelta.x;
+        if (playerController == null)
+        {
+            Debug.Log("No playerController Found");
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class HealthBar : MonoBehaviour
             //Debug.Log("playerHealth" + playerController.playerHealth);
             //Debug.Log("maxHealth" + playerController.maxHealth);
             //Debug.Log("healthPercentage" + healthPercentage);
-            Debug.Log(playerController.playerHealth);
+            //Debug.Log(playerController.playerHealth);
             healthBar.sizeDelta = new Vector2(originalWidth * healthPercentage, healthBar.sizeDelta.y);
             //Debug.Log(healthBar.offsetMax.x);
             takeDamage = false;
