@@ -24,10 +24,10 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpdateHealthBar();
+       // UpdateHealthBar();
     }
 
-    public void UpdateHealthBar()
+   /* public void UpdateHealthBar()
     {
         if (playerController.playerHealth < playerController.maxHealth && takeDamage && playerController.playerHealth >= 0)
         {
@@ -41,5 +41,5 @@ public class HealthBar : MonoBehaviour
             takeDamage = false;
         }
 
-    }
+    }*/
 }

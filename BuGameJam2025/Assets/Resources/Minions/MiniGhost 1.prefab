@@ -136,7 +136,7 @@ MonoBehaviour:
   playerController: {fileID: 0}
   player: {fileID: 0}
   attackInterval: 1
-  attackDamage: 10
+  attackDamage: 5
 --- !u!1 &2525699074115019725
 GameObject:
   m_ObjectHideFlags: 0

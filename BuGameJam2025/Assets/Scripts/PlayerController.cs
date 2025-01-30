@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         playerHealth = maxHealth;
-        loseScreen.SetActive(false);
+        if (loseScreen != null)
+        { 
+            loseScreen.SetActive(false);
+        }
         //Debug.Log(playerHealth);
     }
 

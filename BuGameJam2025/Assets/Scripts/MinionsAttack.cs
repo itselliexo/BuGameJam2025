@@ -13,9 +13,8 @@ public class MinionsAttack : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
        // Debug.Log(other.gameObject);
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && attackTimer >= attackInterval)
         {
-            Debug.Log(other);
             Attack();
         }
     }
