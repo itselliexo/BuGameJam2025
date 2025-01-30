@@ -14,7 +14,7 @@ public class BrotherAnim : MonoBehaviour
         if (animator != null)
         {
             // Set the default animation trigger or state
-            animator.Play("DefaultAnimationName"); // Replace "DefaultAnimationName" with your actual animation name
+            animator.Play("Default"); // Replace "DefaultAnimationName" with your actual animation name
         }
         else
         {

@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 0}
   player: {fileID: 0}
-  attackInterval: 10
+  attackInterval: 1
   attackDamage: 10
 --- !u!1 &2525699074115019725
 GameObject:
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2568515457907736360}
   - component: {fileID: 8666327167829979629}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: ColliderforDamage
   m_TagString: Minion
   m_Icon: {fileID: 0}
@@ -346,6 +346,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 50442484c9597f8488c61836d655d7f3, type: 3}
       propertyPath: m_Name
       value: ghost fix
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 50442484c9597f8488c61836d655d7f3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 50442484c9597f8488c61836d655d7f3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

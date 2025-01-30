@@ -12,12 +12,11 @@ public class MinionsAttack : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject);
+       // Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("hit");
+            Debug.Log(other);
             Attack();
-            Debug.Log("Attack player");
         }
     }
 

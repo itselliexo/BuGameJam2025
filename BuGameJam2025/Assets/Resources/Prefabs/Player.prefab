@@ -345,10 +345,10 @@ GameObject:
   - component: {fileID: 7080042357056339274}
   - component: {fileID: 2977616914348086248}
   - component: {fileID: 3195610895154941490}
+  - component: {fileID: 46965949951137265}
   - component: {fileID: 1963725359380547074}
   - component: {fileID: 5368472528382038389}
   - component: {fileID: 7241776236308597652}
-  - component: {fileID: 8383218323520281418}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -413,6 +413,21 @@ MonoBehaviour:
   cameraObject: {fileID: 0}
   mouseSensitivity: 1
   smoothTime: 1
+--- !u!114 &46965949951137265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099648083958431662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a292023491d8cc4ea0024270cbb9cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  playerHealth: 0
+  loseScreen: {fileID: 0}
 --- !u!114 &1963725359380547074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,20 +478,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   picture: {fileID: 0}
---- !u!114 &8383218323520281418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6099648083958431662}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a292023491d8cc4ea0024270cbb9cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  playerHealth: 0
+  brother: {fileID: 0}
+  sister: {fileID: 0}
+  mother: {fileID: 0}
+  father: {fileID: 0}
+  cat: {fileID: 0}
 --- !u!1001 &192598120799475672
 PrefabInstance:
   m_ObjectHideFlags: 0
