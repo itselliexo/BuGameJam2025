@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaminiaBar : MonoBehaviour
+public class StaminaBar : MonoBehaviour
 {
     public float currentStamina;
     public float maxStamina = 100;

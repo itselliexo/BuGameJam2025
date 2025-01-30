@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 1963725359380547074}
   - component: {fileID: 5368472528382038389}
   - component: {fileID: 186277061955082495}
+  - component: {fileID: 7241776236308597652}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -352,6 +353,7 @@ MonoBehaviour:
   gravity: -23.7
   smoothingTime: 0.3
   cameraObj: {fileID: 0}
+  staminaBar: {fileID: 0}
   characterController: {fileID: 0}
 --- !u!114 &186277061955082495
 MonoBehaviour:
@@ -367,6 +369,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shoot: {fileID: 6306400730868851712, guid: 45d1d05bcc7990941b0f10866690cfc8, type: 3}
   autoRifle: {fileID: 7382806846447955976, guid: 4ab03b79c28eeab4a822845c61f89a25, type: 3}
+--- !u!114 &7241776236308597652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6099648083958431662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb12faa515ae4c840ac1545c1725ff4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  picture: {fileID: 0}
+  fleshLight: {fileID: 0}
 --- !u!1001 &192598120799475672
 PrefabInstance:
   m_ObjectHideFlags: 0
