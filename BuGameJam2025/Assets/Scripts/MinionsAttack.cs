@@ -14,6 +14,7 @@ public class MinionsAttack : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            Debug.Log("hit");
             Attack();
         }
     }
@@ -25,7 +26,7 @@ public class MinionsAttack : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player");
             if (player == null)
             {
-                Debug.Log("No plyerController Found");
+                Debug.Log("No player Found");
             }
         }
         if (playerController == null)
