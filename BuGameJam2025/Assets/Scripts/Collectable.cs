@@ -14,7 +14,7 @@ public class Collectable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.localRotation = Quaternion.Euler(90f, Time.time * 100f, 0);
+        transform.localRotation = Quaternion.Euler(0f, Time.time * 100f, 0f);
     }
 
     private void OnTriggerEnter(Collider other)
