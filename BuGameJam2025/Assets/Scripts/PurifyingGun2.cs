@@ -9,6 +9,7 @@ public class PurifyingGun2 : MonoBehaviour
     [SerializeField] private GameObject firePoint;
     [SerializeField] private Transform firePointTransform;
     [SerializeField] private ParticleSystem purifyEffect;
+    [SerializeField] private BossHealth bossHealth;
     //[SerializeField] private float bulletSpeed = 20f;
     //[SerializeField] float fireRate = 0.5f;
 
@@ -25,6 +26,7 @@ public class PurifyingGun2 : MonoBehaviour
         else if (Input.GetButtonUp("Fire1"))
         {
             purifyEffect.Stop();
+            bossHealth.isDamage = false;
         }
     }
 
@@ -36,6 +38,11 @@ public class PurifyingGun2 : MonoBehaviour
         {
             purifyEffect = purifyEffect.GetComponent<ParticleSystem>();
         }
+        if (bossHealth == null)
+        {
+            bossHealth = bossHealth.GetComponent<BossHealth>();
+        }
+        
     }
 
     public void Fire()

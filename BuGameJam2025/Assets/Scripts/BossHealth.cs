@@ -6,13 +6,15 @@ public class BossHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] int maxHealth;
     public int currentHealth;
-    private Animator animator;
+    //private Animator animator;
     public bool isDamage = false;
     [SerializeField] private float regenTimer;
     [SerializeField] private float healthTimer;
     [SerializeField] private float healthTick = 2f;
     [SerializeField] private float timeUntilRegen;
     [SerializeField] private int regenAmount;
+    
+    
     //[SerializeField] private float timeSinceLastDamaged;
 
     void Start()
@@ -26,6 +28,7 @@ public class BossHealth : MonoBehaviour, IDamageable
     {
         regenTimer += Time.deltaTime;
         healthTimer += Time.deltaTime;
+        
         //timeSinceLastDamaged += Time.deltaTime;
         if (regenTimer >= timeUntilRegen)
         {
@@ -46,7 +49,7 @@ public class BossHealth : MonoBehaviour, IDamageable
         {   //timeSinceLastDamaged = 0f;
             //purifier.damage -= currentHealth;
             currentHealth -= damage;
-            isDamage = false;
+            
         }
     }
 
