@@ -12,7 +12,18 @@ public class BossHealth : MonoBehaviour, IDamageable
     [SerializeField] private float healthTick = 2f;
     [SerializeField] private float timeUntilRegen;
     [SerializeField] private int regenAmount;
+<<<<<<< Updated upstream
     [SerializeField] private float timeSinceLastDamaged;
+=======
+    [SerializeField] private float damageDelay;
+    [SerializeField] private GameObject picturePrefab;
+    [SerializeField] private Transform spawnPoint;
+    
+    private float lastDamageTime;   
+    
+    
+    //[SerializeField] private float timeSinceLastDamaged;
+>>>>>>> Stashed changes
 
     void Start()
     {
@@ -55,7 +66,12 @@ public class BossHealth : MonoBehaviour, IDamageable
 
     public void HandleDeath()
     {
+        Instantiate(picturePrefab, spawnPoint.position, Quaternion.identity);
         Destroy(gameObject);
+<<<<<<< Updated upstream
         Debug.Log("Boss Defeated");
+=======
+
+>>>>>>> Stashed changes
     }
 }
