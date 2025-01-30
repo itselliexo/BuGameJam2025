@@ -20,7 +20,10 @@ public class MinionNavMesh : MonoBehaviour
         {
             agent.isStopped = true;
         }
-        else
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject == player)
         {
             agent.isStopped = false;
         }
@@ -59,6 +62,22 @@ public class MinionNavMesh : MonoBehaviour
                 agent.destination = evadeDestination;
             }
         }
+        FacePlayer();
+    }
+
+    private void FacePlayer()
+    {
+        if (player != null)
+        {
+            Vector3 directionToPlayer = player.transform.position - transform.position;
+            directionToPlayer.y = 0f; // Ignore vertical rotation to prevent tilting
+
+            if (directionToPlayer != Vector3.zero)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(directionToPlayer);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f); // Smooth rotation
+            }
+        }
     }
 
     private void UpdateEvasionOffset()
@@ -67,7 +86,10 @@ public class MinionNavMesh : MonoBehaviour
         directionToPlayer.y = 0;
         Vector3 perpendicular = Vector3.Cross(directionToPlayer, Vector3.up).normalized;
         float randomDirection = Random.value > 0.5f ? 1f : -1f;
-        evasionOffset = perpendicular * randomDirection * evasionDistance;
+
+        float verticalOffset = Random.Range(-evasionDistance * 0.5f, evasionDistance * 0.5f);
+
+        evasionOffset = (perpendicular * randomDirection * evasionDistance) + (Vector3.up * verticalOffset);
     }
     public void TakeDamage(int damageAmount)
     {

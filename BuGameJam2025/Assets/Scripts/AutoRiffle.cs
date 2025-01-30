@@ -27,7 +27,7 @@ public class Autoriffle : MonoBehaviour
 
     private void Start()
     {
-        firePoint = GameObject.FindGameObjectWithTag("FirePoint");
+        firePoint = GameObject.FindGameObjectWithTag("FirePointAuto");
         /*firePointTrsnsform = GameObject.FindGameObjectWithTag("FirePoint").transform;*/
         firePointTransform = firePoint.GetComponent<Transform>();
     }
