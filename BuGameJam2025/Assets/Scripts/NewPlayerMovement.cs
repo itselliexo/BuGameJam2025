@@ -28,8 +28,16 @@ public class NewPlayerMovement : MonoBehaviour
     {
         speed = defaultSpeed;
         characterController = GetComponent<CharacterController>();
+        if (characterController == null)
+        {
+            characterController = GetComponent<CharacterController>();
+        }
         Cursor.lockState = CursorLockMode.Locked;
-        StaminaBar staminaBar = GetComponent<StaminaBar>();
+        StaminaBar staminaBar = gameObject.GetComponent<StaminaBar>();
+        if (staminaBar == null)
+        {
+            Debug.Log("No StaminaBar Found");
+        }
     }
 
     // Update is called once per frame

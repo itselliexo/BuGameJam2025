@@ -16,6 +16,10 @@ public class Purifier : MonoBehaviour
         if (cameraTransform == null)
         {
             cameraTransform = Camera.main.transform;
+            if (cameraTransform == null)
+            {
+                Debug.LogError("No camera found");
+            }
         }
     }
 
