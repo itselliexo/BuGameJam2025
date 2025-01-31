@@ -23,16 +23,22 @@ public class NewPlayerMovement : MonoBehaviour
 
     private Vector3 currentDirection;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        speed = defaultSpeed;
         characterController = GetComponent<CharacterController>();
         if (characterController == null)
         {
             characterController = GetComponent<CharacterController>();
         }
+
         Cursor.lockState = CursorLockMode.Locked;
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        speed = defaultSpeed;
+        Time.timeScale = 1;
+        
         StaminaBar staminaBar = gameObject.GetComponent<StaminaBar>();
         if (staminaBar == null)
         {

@@ -30,9 +30,11 @@ public class PlayerController : MonoBehaviour
 
     void HandlePlayerDeath()
     {
-        loseScreen.SetActive(true);
         Debug.Log("Game Over");
+        Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
+        loseScreen.SetActive(true);
+        
          
     }
     //Changes: I moved the debug statement into its own method so we can call it instead of having all the death logic in the update function
