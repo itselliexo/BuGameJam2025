@@ -21,6 +21,7 @@ TagManager:
   - Cat
   - Gun
   - Purifier
+  - Lolipop
   layers:
   - Default
   - TransparentFX

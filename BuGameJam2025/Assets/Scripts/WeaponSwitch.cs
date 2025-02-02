@@ -7,6 +7,7 @@ public class WeaponSwitch : MonoBehaviour
     [SerializeField] private GameObject gun;
     [SerializeField] private GameObject autoRifle;
     [SerializeField] private GameObject purifier;
+    [SerializeField] private GameObject lolipop;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +23,14 @@ public class WeaponSwitch : MonoBehaviour
         {
             purifier = GameObject.FindGameObjectWithTag("Purifier");
         }
+        if (lolipop == null)
+        {
+            lolipop = GameObject.FindGameObjectWithTag("Lolipop");
+        }
         gun.SetActive(true);
         autoRifle.SetActive(false);
         purifier.SetActive(false);
+        lolipop.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +54,14 @@ public class WeaponSwitch : MonoBehaviour
             gun.SetActive(false);
             purifier.SetActive(false);
             autoRifle.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            gun.SetActive(false);
+            purifier.SetActive(false);
+            autoRifle.SetActive(false);
+            lolipop.SetActive(true);
         }
     }
 }
