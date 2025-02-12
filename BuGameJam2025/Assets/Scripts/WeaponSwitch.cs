@@ -41,6 +41,7 @@ public class WeaponSwitch : MonoBehaviour
             gun.SetActive(true);
             purifier.SetActive(false);
             autoRifle?.SetActive(false);
+            lolipop.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -48,12 +49,14 @@ public class WeaponSwitch : MonoBehaviour
             gun.SetActive(false);
             purifier.SetActive(true);
             autoRifle.SetActive(false);
+            lolipop.SetActive(false);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             gun.SetActive(false);
             purifier.SetActive(false);
             autoRifle.SetActive(true);
+            lolipop.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
